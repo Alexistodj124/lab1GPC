@@ -81,20 +81,19 @@ fn main() {
     framebuffer.set_background_color(0x000000);
     framebuffer.clear();
 
-    framebuffer.set_current_color(0xFF0000);
+    framebuffer.set_current_color(0x0000FF);
 
-    let poly2 = vec![
-        (321, 335),
-        (288, 286),
-        (339, 251),
-        (374, 302)
+    let poly3 = vec![
+        (377, 249),
+        (411, 197),
+        (436, 249)
     ];
 
-    fill_polygon(&mut framebuffer, &poly2);
+    fill_polygon(&mut framebuffer, &poly3);
 
     framebuffer.set_current_color(0xFFFFFF);
 
-    framebuffer.polygon(&poly2);
+    framebuffer.polygon(&poly3);
 
     framebuffer.flip_horizontal();
     framebuffer.flip_vertical();
